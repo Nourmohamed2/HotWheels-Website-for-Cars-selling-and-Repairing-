@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>HotWheels</title>
+  <link href="css.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Car Ad Posting</title>
+  </head>
+  <body>
+      <form action="/submit_ad" method="post" enctype="multipart/form-data">
+          <h1 style="color: white;">Add your car</h1>
+          <label for="category" style="color: white;" >Selected category:</label>
+          <select name="category" id="category">
+              <option value="vehicles_cars_for_sale">Vehicles - Cars for Sale</option>
+          </select>
+          <br>
+          <label for="title" style="color: white;">Ad title:</label>
+          <input type="text" id="title" name="title" placeholder="Mention the key features of your item (e.g. brand, model, age, type)" required>
+          <br>
+          <label for="brand" style="color: white;">Brand:</label>
+          <select name="brand" id="brand">
+            <option value="">Select a brand</option>
+            <option value="toyota">Toyota</option>
+            <option value="bmw">BMW</option>
+            <option value="mercedes">Mercedes-Benz</option>
+            <option value="honda">Honda</option>
+            <option value="ford">Ford</option>
+          </select>
+          <br>
+          <label for="description" style="color: white;">Description:</label>
+          <textarea id="description" name="description" rows="4" cols="50" placeholder="Include condition, features and reason for selling" required></textarea>
+          <br>
+          <label for="price" style="color: white;">Set a price:</label>
+          <input type="number" id="price" name="price" step="0.01" min="0" placeholder="EGP" required>
+          <br>
+          <fieldset id="payment_options">
+              <legend style="color:white;">Payment Options</legend>
+              <input type="checkbox" id="cash" name="payment_options[]" value="cash">
+              <label for="cash" style="color: white;">Cash</label><br>
+              <input type="checkbox" id="exchange" name="payment_options[]" value="exchange">
+              <label for="exchange" style="color: white;">Exchange</label><br>
+              <input type="checkbox" id="installments" name="payment_options[]" value="installments">
+              <label for="installments" style="color: white;">Installments</label>
+          </fieldset>
+          <br>
+          <label for="photos" style="color: white;">Upload up to 20 photos:</label>
+          <input type="file" id="photos" name="photos[]" multiple required>
+          <br>
+          <input type="submit" value="Submit your ad">
+      </form>
+  </body>
+  </html>
+
+</body>
+
+</html>
